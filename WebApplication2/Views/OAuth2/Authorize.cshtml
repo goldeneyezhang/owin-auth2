@@ -1,0 +1,14 @@
+﻿
+@{
+	ViewBag.Title = "Authorize";
+}
+
+<h2>Authorize</h2>
+<form method="post">
+	@Html.AntiForgeryToken();
+	<p>你好 @this.User.Identity.Name</p>
+	<p>需要你授权</p>
+	<input type="submit" value="授权"/>
+</form>
+
+
